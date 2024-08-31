@@ -64,7 +64,7 @@ const SignupForm = () => {
       <form onSubmit={handleSubmit(create)} className="w-full ">
          {/* Error Message */}
       {error && (
-        <p className="text-red-600  text-center">
+        <p className="text-red-600  text-center">{error}
           Password must be between 8 and 265 characters long
         </p>
       )}
