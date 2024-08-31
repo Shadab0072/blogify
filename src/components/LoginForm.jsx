@@ -60,7 +60,7 @@ const LoginForm = () => {
         {/* Form */}
         <form onSubmit={handleSubmit(login)} className="w-full max-w-xs">
           {/* Error Message */}
-          {error && <p className="text-red-600 my-4 text-center">Invalid Email or Password</p>}
+          {error && <p className="text-red-600 my-4 text-center">{error}Invalid Email or Password</p>}
           <div className="flex flex-col items-center gap-4"> 
             {/* Email Input */}
             <Input
