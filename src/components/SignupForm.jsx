@@ -65,7 +65,7 @@ const SignupForm = () => {
          {/* Error Message */}
       {error && (
         <p className="text-red-600  text-center">
-          Password must be between 8 and 265 characters long
+          {error}Password must be between 8 and 265 characters long
         </p>
       )}
         <div className="flex flex-col md:px-12 items-center gap-4">
