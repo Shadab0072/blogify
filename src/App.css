@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.myfont{
+  font-family: "Baskervville SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.myNewFont {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  /* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  background: radial-gradient(circle closest-side,#000 94%,#0000) right/calc(200% - 1em) 100%;
+  animation: l24 1s infinite alternate linear;
+}
+.loader::before {
+  content: "Loading...";
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side,#fff 94%,#000);
+  -webkit-background-clip:text;
+          background-clip:text;
+}
+
+@keyframes l24{
+  100%{background-position: left}
+}
+
+
+
+
+/* Floating Button Styles */
+.floating-button {
+  position: fixed;
+  bottom: 20px; /* Default for medium devices */
+  right: 20px; /* Default for medium devices */
+  width: 70px; /* Default size */
+  height: 70px;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; /* Smooth transition for hover and position */
+}
+
+/* Image inside the floating button */
+.floating-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+/* Hover effect */
+.floating-button:hover .floating-image {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) { /* For small devices (tablets and below) */
+  .floating-button {
+    bottom: 16px; /* Adjust bottom positioning */
+    right: 16px; /* Adjust right positioning */
+    width: 60px; /* Smaller button size */
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) { /* For very small devices (phones) */
+  .floating-button {
+    bottom: 12px; /* Further adjust for small screens */
+    right: 12px;
+    width: 50px; /* Even smaller button size */
+    height: 50px;
+  }
+}
+
+
+
+
