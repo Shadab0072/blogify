@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import PostCard from '../components/PostCard'
-import Container from '../components/Container'
 import service from '../appwrite/db'
-import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import img1 from '../assets/photo.webp'
+import { useSelector } from 'react-redux'
 
 
 const Inative = () => {
     const [posts,setPosts] = useState([]);
-    
-    
-      const authStatus = useSelector((state)=>state.auth.status)
+
+    const userData = useSelector((state)=> state.auth.userData)
+    //console.log(userData.$id )
+    //console.log(posts.userId)
+
+
+    posts.map((post) => console.log(post.userId))
+
+
+
+    const authStatus = useSelector((state)=>state.auth.status)
     
 
 
@@ -80,7 +87,7 @@ const Inative = () => {
   <div className='grid grid-cols-1  lg:grid-cols-2 gap-4  w-full '>
 
     {[...posts].reverse().map((post) =>
-      post.status === "inactive" ? (
+      post.status === "inactive" && post.userId === userData.$id ? (
         <div key={post.$id} className='w-full'>
           <PostCard {...post} />
         </div>

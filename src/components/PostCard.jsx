@@ -5,9 +5,6 @@ import { useSelector } from 'react-redux'
 import parse from "html-react-parser";
 
 
-
-
-
 const PostCard = ({$id,featuredImage,title,content}) => {
 
 

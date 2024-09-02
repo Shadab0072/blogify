@@ -14,8 +14,8 @@ const Post = () => {
     const userData = useSelector((state)=> state.auth.userData)
 
        // console.log(slug)
-       // console.log(userData)
-       //console.log(post)
+        // console.log(userData)
+        // console.log(post)
 
     const isAuthor = post && userData ? post.userId === userData.$id : false;
     

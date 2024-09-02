@@ -11,10 +11,8 @@ const AllPost = () => {
 
     const [posts,setPosts] = useState([]);
 
-    const mine = posts.map(item => item.status);
-    console.log(mine)
-
-    // console.log(posts.status , "all post se value a rhi h")
+    
+     //console.log(posts ,"all post se value a rhi h")
 
     useEffect(()=>{
         service.getAllPost([]).then((AllPost)=>{
