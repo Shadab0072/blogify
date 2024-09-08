@@ -40,7 +40,7 @@ function Footer() {
         {/* Copyright Information */}
         <div className="p-4 border-t-2 md:border-t-0 md:border-l-2 text-center">
           <p>© 2024 Blogify </p>
-          <p> Powered by Shadab Husain</p>
+          <p> Powered by Mohd Faizan</p>
         </div>
       </div>
     </section>
