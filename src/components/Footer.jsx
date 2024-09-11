@@ -15,15 +15,15 @@ function Footer() {
 
         {/* Social Media Links */}
         <div className="flex flex-row items-center gap-4 p-4 border-b-2 md:border-b-0 md:border-r-2">
-          <Link to={''} target='_blank'>
+          <Link to={''} target=''>
             <FontAwesomeIcon icon={faInstagram} size="2x" className="text-white" />
           </Link>
 
-          <Link to={''} target='_blank'>
+          <Link to={''} target=''>
             <FontAwesomeIcon icon={faWhatsapp} size="2x" className="text-white" />
           </Link>
 
-          <Link to={''} target='_blank'>
+          <Link to={''} target=''>
             <FontAwesomeIcon icon={faGithub} size="2x" className="text-white" />
           </Link>
         </div>
